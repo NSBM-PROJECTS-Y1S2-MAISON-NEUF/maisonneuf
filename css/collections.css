@@ -1,0 +1,159 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+header {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+}
+
+#collections-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #ffd700;
+    background-image: url('images/collections-hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-light {
+    background-color: #fff;
+}
+
+.section-dark {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title-dark {
+    color: #ffd700;
+}
+
+.collection-item, .offer-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.collection-item img, .offer-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.collection-item h3, .offer-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.collection-item p, .offer-item p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #ffd700;
+    border-color: #ffd700;
+    color: #343a40;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Additional animations */
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.slide-up {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 2s ease-in, opacity 2s ease-in;
+}
+
+.slide-up.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .collection-item h3, .offer-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .collection-item p, .offer-item p {
+        font-size: 1rem;
+    }
+}

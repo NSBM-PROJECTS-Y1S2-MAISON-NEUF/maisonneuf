@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Login Status</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    function checkLoginStatus() {
+        $.ajax({
+            url: 'session.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                if (response.loggedIn) {
+                    // window.location.href = "userProfile.html"
+                    alert("DEBUG: Logged in");
+                } else {
+                    alert("DEBUG: Not Logged In");
+                }
+            },
+            error: function(xhr, status, error) {
+                // Handle error
+                console.error('Error:', error);
+            }
+        });
+    }
+    checkLoginStatus();
+});
+</script>
+</head>
+<body>
+
+<h1>Login Status</h1>
+<p id="loginStatus">Checking login status...</p>
+
+</body>
+</html>

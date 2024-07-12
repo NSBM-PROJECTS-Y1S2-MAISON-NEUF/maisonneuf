@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product - Maison Neuf</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .product-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .product-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn-gold {
+            background-color: #ffd700;
+            border: none;
+            color: #343a40;
+        }
+
+        .btn-gold:hover {
+            background-color: darken(#ffd700, 10%);
+            color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand text-gold" href="index.html">Maison Neuf</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="collections.html">Collections</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container product-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/product1.jpg" alt="Product Image">
+                </div>
+                <div class="col-md-6">
+                    <h2>Product Name</h2>
+                    <p>Category: <span>Clothing</span></p>
+                    <p>Subcategory: <span>Dress</span></p>
+                    <p>Price: <span>LKR 5500</span></p>
+                    <p>Available Sizes: <span>S, M, L</span></p>
+                    <p>Available Colors: <span>Red, Blue, Yellow</span></p>
+                    <button class="btn btn-gold">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">&copy; 2023 Maison Neuf. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

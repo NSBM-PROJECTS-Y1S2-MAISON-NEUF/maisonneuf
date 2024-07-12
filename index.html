@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maison Neuf - Sri Lanka</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff !important;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border: 2px solid #ffd700;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: #fff;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-size: 1.1rem;
+        }
+
+        .nav-link:hover {
+            color: #ffd700 !important;
+        }
+
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #ffd700;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            animation: slideshow 20s infinite;
+        }
+
+        @keyframes slideshow {
+            0% {
+                background-image: url('images/Wall.jpeg');
+            }
+            25% {
+                background-image: url('images/Wall 2.jpeg');
+            }
+            50% {
+                background-image: url('images/wall 3.jpeg');
+            }
+            75% {
+                background-image: url('images/wall 4.jpeg');
+            }
+            100% {
+                background-image: url('images/Wall.jpeg');
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content .btn-primary {
+            background-color: #ffd700;
+            border-color: #ffd700;
+            color: #343a40;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .hero-content .btn-primary:hover {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        .section {
+            padding: 60px 0;
+            border: 5px solid #ffd700;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .section-light {
+            background-color: #fff;
+        }
+
+        .section-dark {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title-dark {
+            color: #ffd700;
+        }
+
+        .feature-box, .testimonial-box, .team-member {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .testimonial-box {
+            background-color: #f8f9fa;
+        }
+
+        .feature-box h3, .testimonial-box p {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p, .testimonial-box span {
+            font-size: 1rem;
+        }
+
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-member h5 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+        }
+
+        .newsletter-form .form-control {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Additional animations */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        .slide-up {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 2s ease-in, opacity 2s ease-in;
+        }
+
+        .slide-up.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .testimonial-box p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images\MaisonNeuf_Logo.png" alt="Maison Neuf Logo" class="logo">
+                    Maison Neuf
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="collections.html">Collections</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Start -->
+    <main>
+        <section id="hero">
+            <div class="container hero-content">
+                <div class="hero-text-box">
+                    <h1 class="display-4">Discover the Best of Sri Lankan Fashion</h1>
+                    <p class="lead">Explore our curated collection of clothing, accessories, and cosmetics made with love in Sri Lanka.</p>
+                    <a href="shop.html" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- Features Section Start -->
+        <section id="features" class="section section-light fade-in">
+            <div class="container features-container">
+                <h2 class="section-title">Features</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <h3>Quality Products</h3>
+                            <p>Only the finest quality products sourced directly from Sri Lanka.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <h3>Exclusive Designs</h3>
+                            <p>Unique and exclusive designs that you won't find anywhere else.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <h3>Fast Shipping</h3>
+                            <p>Reliable and fast shipping to get your products to you quickly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features Section End -->
+
+        <!-- Testimonials Section Start -->
+        <section id="testimonials" class="section section-dark slide-up">
+            <div class="container">
+                <h2 class="section-title section-title-dark" style="color: gold; font-family: 'Playfair Display', serif; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">Testimonials</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial-box" style="background-color: #2d2d2d; border: 2px solid gold; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <p style="font-family: 'Playfair Display', cursive; font-size: 1.2rem; color: gold;">"Amazing quality and beautiful designs. I'm in love with my new dress!"</p>
+                            <span style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #ffd700;">- Sahan Wanasundara</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-box" style="background-color: #2d2d2d; border: 2px solid gold; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <p style="font-family: 'Playfair Display', cursive; font-size: 1.2rem; color: gold;">"The customer service was fantastic and the products arrived on time."</p>
+                            <span style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #ffd700;">- Dishani Ganegoda</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-box" style="background-color: #2d2d2d; border: 2px solid gold; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <p style="font-family: 'Playfair Display', cursive; font-size: 1.2rem; color: gold;">"Highly recommend Maison Neuf for anyone looking for unique fashion pieces."</p>
+                            <span style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #ffd700;">- Sumana Godagamage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <!-- Testimonials Section End -->
+
+        <!-- Extended Content Section Start -->
+        <section id="extra-content" class="section section-light fade-in">
+            <div class="container">
+                <h2 class="section-title">More from Maison Neuf</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Fashion Shows</h3>
+                        <p>Experience the excitement of our fashion shows, where we showcase the latest collections from our talented designers. Join us at exclusive events and see our beautiful designs come to life on the runway.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Designer Collaborations</h3>
+                        <p>We collaborate with some of the most innovative designers in Sri Lanka to bring you exclusive collections that you won't find anywhere else. Discover unique pieces that reflect the creativity and craftsmanship of our local designers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Extended Content Section End -->
+
+        <!-- Newsletter Section Start -->
+        <section id="newsletter" class="section section-light fade-in">
+            <div class="container">
+                <h2 class="section-title">Stay Updated</h2>
+                <p>Subscribe to our newsletter to receive the latest updates on new arrivals, special offers, and fashion tips.</p>
+                <form action="subscribe.php" method="post" class="newsletter-form">
+                    <div class="mb-3">
+                        <label for="newsletter-email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="newsletter-email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        <!-- Newsletter Section End -->
+
+        <!-- Gallery Section Start -->
+        <section id="gallery" class="section section-dark fade-in">
+            <div class="container">
+                <h2 class="section-title section-title-dark">Gallery</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images\PROMO1.jpe" alt="Gallery Image 1" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images\promo2.jpeg" alt="Gallery Image 2" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images\promo3.jpeg" alt="Gallery Image 3" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section End -->
+
+        <!-- Our Story Section Start -->
+        <section id="our-story" class="section section-light fade-in">
+            <div class="container">
+                <h2 class="section-title">Our Story</h2>
+                <p>Maison Neuf was founded with the mission to bring the beauty of Sri Lankan fashion to the world. Our collections feature handcrafted designs, premium materials, and a dedication to quality that ensures every piece is as unique as you are.</p>
+                <p>Our journey began with a simple idea: to create a platform where Sri Lankan artisans and designers could showcase their talents and reach a global audience. Today, we are proud to offer a curated selection of clothing, accessories, and beauty products that reflect the rich cultural heritage and modern elegance of Sri Lanka.</p>
+                <img src="images\ourstory.jpeg" alt="Our Story" class="img-fluid">
+            </div>
+        </section>
+        <!-- Our Story Section End -->
+
+        <!-- Meet Our Team Section Start -->
+        <section id="team" class="section section-light fade-in">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team1.jpg" alt="Team Member 1" class="img-fluid">
+                            <h5>Yehan Namarathna</h5>
+                            <p>Founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team2.jpg" alt="Team Member 2" class="img-fluid">
+                            <h5>Tharundi Perera</h5>
+                            <p>Creative Director</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team3.jpg" alt="Team Member 3" class="img-fluid">
+                            <h5>Anjalee Balasooriya</h5>
+                            <p>Operations Manager</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team4.jpg" alt="Team Member 4" class="img-fluid">
+                            <h5>Brunthika </h5>
+                            <p>Marketing Head</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Meet Our Team Section End -->
+
+        <!-- Contact Section Start -->
+        <section id="contact" class="section section-light fade-in">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <form action="contact.php" method="post" class="contact-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+
+        <!-- Footer Section Start -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Maison Neuf. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            const slideUps = document.querySelectorAll('.slide-up');
+
+            const options = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            fadeIns.forEach(fadeIn => {
+                observer.observe(fadeIn);
+            });
+
+            slideUps.forEach(slideUp => {
+                observer.observe(slideUp);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Neuf - My Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .account-details, .order-history {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .order-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .order-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <h1>My Account</h1>
+    </header>
+    <main>
+        <section class="account-details">
+            <h2>Account Details</h2>
+            <p><strong>Username:</strong> user123</p>
+            <p><strong>Email:</strong> user@example.com</p>
+            <p><strong>Full Name:</strong> John Doe</p>
+            <p><strong>Address:</strong> 123 Main Street, Colombo, Sri Lanka</p>
+            <p><strong>Phone:</strong> +94 123 456 789</p>
+            <button>Edit Details</button>
+        </section>
+
+        <section class="order-history">
+            <h2>Order History</h2>
+            <div class="order-item">
+                <h3>Order #1001</h3>
+                <p><strong>Date:</strong> January 15, 2024</p>
+                <p><strong>Status:</strong> Delivered</p>
+                <p><strong>Total:</strong> $150.00</p>
+                <button>View Details</button>
+            </div>
+            <div class="order-item">
+                <h3>Order #1002</h3>
+                <p><strong>Date:</strong> February 10, 2024</p>
+                <p><strong>Status:</strong> Shipped</p>
+                <p><strong>Total:</strong> $200.00</p>
+                <button>View Details</button>
+            </div>
+            <div class="order-item">
+                <h3>Order #1003</h3>
+                <p><strong>Date:</strong> March 5, 2024</p>
+                <p><strong>Status:</strong> Processing</p>
+                <p><strong>Total:</strong> $175.00</p>
+                <button>View Details</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Maison Neuf. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

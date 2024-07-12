@@ -1,0 +1,12 @@
+INSERT INTO Products (Website, ProductName, ProductLink, Category, Subcategory, Size, Colors, Price, SalesPrice, Tags) VALUES
+('Fashion Market', 'Floral Summer Dress', 'https://fashionmarket.lk/product/floral-summer-dress', 'Clothing', 'Dress', 'S, M, L', 'Red, Blue, Yellow', 5500, NULL, 'summer, casual, floral, cotton'),
+('Odel', 'Embroidered Cotton Kurta', 'https://www.odel.lk/product/embroidered-cotton-kurta', 'Clothing', 'Kurta', 'XS, S, M', 'White, Cream, Pink', 4200, NULL, 'traditional, festive, cotton, embroidered'),
+('The Body Shop', 'Shea Butter Hand Cream', 'https://www.thebodyshop.lk/product/shea-butter-hand-cream', 'Beauty', 'Hand Cream', '30ml, 100ml', 'N/A', 1800, NULL, 'skincare, moisturizing, shea butter, natural'),
+('House of Fashions', 'Men\'s Casual Shirt', 'https://www.houseoffashions.lk/product/mens-casual-shirt', 'Clothing', 'Shirt', 'S, M, L, XL', 'Blue, White, Gray', 3800, 3200, 'casual, men, cotton, button-down'),
+('Cool Planet', 'Women\'s Printed T-Shirt', 'https://coolplanet.lk/product/womens-printed-t-shirt', 'Clothing', 'T-Shirt', 'XS, S, M', 'Black, White, Pink', 1500, NULL, 'casual, women, graphic tee, cotton'),
+('Nithyakalyani', 'Silk Saree with Zari Work', 'https://www.nithyakalyani.com/product/silk-saree-with-zari-work', 'Clothing', 'Saree', 'One Size', 'Various', 18500, NULL, 'traditional, silk, zari, wedding, special occasion'),
+('Beverly Street', 'Handmade Silver Earrings', 'https://beverlystreet.lk/product/handmade-silver-earrings', 'Jewelry', 'Earrings', 'N/A', 'Silver', 2800, NULL, 'handmade, silver, jewelry, statement earrings'),
+('Spring & Summer', 'Linen Blend Palazzo Pants', 'https://springandsummer.lk/product/linen-blend-palazzo-pants', 'Clothing', 'Pants', 'S, M, L', 'Beige, Navy', 4950, NULL, 'linen, summer, casual, palazzo'),
+('The Design Collective', 'Handwoven Cotton Scarf', 'https://thedesigncollectivestore.com/product/handwoven-cotton-scarf', 'Accessories', 'Scarf', 'N/A', 'Various', 3500, NULL, 'handmade, cotton, scarf, fair trade'),
+('Nolimit', 'Nike Air Max Sneakers', 'https://www.nolimit.lk/product/nike-air-max-sneakers', 'Shoes', 'Sneakers', '6, 7, 8, 9', 'Black, White', 12990, NULL, 'sports, running, nike, air max'),
+('The Body Shop', 'Tea Tree Oil', 'https://www.thebodyshop.lk/product/tea-tree-oil', 'Beauty', 'Skincare', '30ml', 'N/A', 2200, NULL, 'acne, blemish control, tea tree oil, vegan'),

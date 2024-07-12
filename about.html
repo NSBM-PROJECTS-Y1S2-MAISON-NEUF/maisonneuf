@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Neuf - About Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap">
+    <style>
+        body, html {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            scroll-behavior: smooth;
+        }
+
+        header, footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            padding: 0 15px;
+        }
+
+        .navbar-brand img {
+            width: 80px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand img:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler {
+            border-color: #ffd700;
+        }
+
+        .nav-link {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            color: #ffd700;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 0;
+        }
+
+        .section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gold-text {
+            color: #ffd700;
+        }
+
+        .divider {
+            border-top: 3px solid #ffd700;
+            margin: 40px 0;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 5px solid #ffd700;
+        }
+
+        .about-story {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            border-top: 5px solid #ffd700;
+        }
+
+        .team-member, .value-box {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover, .value-box:hover {
+            border-color: #ffd700;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-title, .team-title {
+            color: #ffd700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-box {
+            background-color: #2d2d2d;
+            border: 2px solid gold;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-box p {
+            font-family: 'Playfair Display', cursive;
+            font-size: 1.2rem;
+            color: gold;
+        }
+
+        .testimonial-box span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #ffd700;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #ffd700;
+            transform: translateX(-50%);
+        }
+
+        .timeline-event {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+        }
+
+        .timeline-event.left {
+            left: 0;
+            transform: translateX(-30%);
+        }
+
+        .timeline-event.right {
+            right: 0;
+            transform: translateX(30%);
+        }
+
+        .timeline-event span {
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            background: #ffd700;
+            border: 3px solid white;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-event.right span {
+            left: auto;
+            right: -15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline-event {
+                width: 70%;
+                margin-left: 15%;
+            }
+
+            .timeline-event.left, .timeline-event.right {
+                transform: translateX(0%);
+            }
+
+            .navbar-brand img {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Maison Neuf Logo">
+                    Maison Neuf
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-content section-light">
+            <div class="container">
+                <h2 class="section-title text-center gold-text">About Us</h2>
+                <p class="lead text-center">Maison Neuf, the House of Nine, was born out of the passion and creativity of nine fashion enthusiasts at NSBM, Sri Lanka. We came together, driven by a shared dream to bring elegance, sustainability, and innovation to the fashion industry. Each of us brings a unique perspective, blending traditional Sri Lankan aesthetics with contemporary design.</p>
+
+                <h3 class="text-center" style="font-family: 'Playfair Display', serif; color: gold;">Our Story</h3>
+                <p class="text-center"><img src="images/journey.jpg" alt="Our Journey" class="img-fluid"></p>
+                <p class="text-center">Our journey began in the bustling classrooms of NSBM, where we spent countless hours brainstorming, sketching, and discussing how we could leave a mark on the fashion world. Today, Maison Neuf stands as a testament to our dedication and hard work. Our brand is not just about fashion; it’s about telling a story through every piece we create. We aim to blend the rich cultural heritage of Sri Lanka with modern elegance, bringing unique fashion statements to life.</p>
+
+                <div class="divider"></div>
+
+                <h3 class="text-center" style="font-family: 'Playfair Display', serif; color: gold;">Our Values</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="value-box">
+                            <img src="images/quality.jpg" alt="Quality" class="img-fluid">
+                            <h3>Quality</h3>
+                            <p>We believe in using only the finest materials and craftsmanship to create our products, ensuring that every piece is a work of art. Our dedication to quality means that each item is meticulously crafted to meet the highest standards.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-box">
+                            <img src="images/sustainability.jpg" alt="Sustainability" class="img-fluid">
+                            <h3>Sustainability</h3>
+                            <p>Our commitment to sustainability is unwavering. We strive to minimize our environmental footprint through eco-friendly practices and materials. From sourcing raw materials to our manufacturing processes, sustainability is at the heart of everything we do.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-box">
+                            <img src="images/customer-satisfaction.jpg" alt="Customer Satisfaction" class="img-fluid">
+                            <h3>Customer Satisfaction</h3>
+                            <p>Our customers are at the heart of everything we do. We are dedicated to providing an exceptional shopping experience and outstanding customer service. Your satisfaction is our top priority, and we go above and beyond to ensure you are delighted with every purchase.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="text-center" style="font-family: 'Playfair Display', serif; color: gold;">Our Services</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Personalized Styling</h4>
+                        <p>At Maison Neuf, we offer personalized styling services to help you find the perfect outfit for any occasion. Our expert stylists will work with you to understand your preferences and create a look that is uniquely yours.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Custom Tailoring</h4>
+                        <p>We provide custom tailoring services to ensure that your clothing fits perfectly. Whether it's a special event or everyday wear, our skilled tailors will make adjustments to achieve the ideal fit, enhancing your comfort and confidence.</p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="text-center" style="font-family: 'Playfair Display', serif; color: gold;">Meet Our Team</h3>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team1.jpg" alt="Team Member 1" class="img-fluid">
+                            <h5>Yehan Namarathna</h5>
+                            <p>Founder & CEO</p>
+                            <p>Yehan is the visionary behind Maison Neuf, with a passion for fashion and a drive to innovate. His leadership and creativity have been instrumental in shaping the brand.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team2.jpg" alt="Team Member 2" class="img-fluid">
+                            <h5>Tharundi Perera</h5>
+                            <p>Chief Designer</p>
+                            <p>Tharundi’s designs blend tradition with modernity, creating unique pieces that stand out. Her attention to detail and artistic flair make every collection special.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team3.jpg" alt="Team Member 3" class="img-fluid">
+                            <h5>Anjalee Balasooriya</h5>
+                            <p>Operations Manager</p>
+                            <p>Anjalee ensures that everything runs smoothly at Maison Neuf. Her organizational skills and dedication keep the operations efficient and customer-focused.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team4.jpg" alt="Team Member 4" class="img-fluid">
+                            <h5>Brunthika Judewalton</h5>
+                            <p>Marketing Head</p>
+                            <p>Brunthika is the creative force behind our marketing campaigns. Her innovative strategies and keen understanding of the market help us reach and engage with our audience effectively.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team5.jpg" alt="Team Member 5" class="img-fluid">
+                            <h5>Geodiya Ruxan</h5>
+                            <p>Product Manager</p>
+                            <p>Geodiya oversees product development and ensures that every item meets our quality standards. His expertise in product management drives our innovation.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team6.jpg" alt="Team Member 6" class="img-fluid">
+                            <h5>Sandaranga Ubesekara</h5>
+                            <p>Finance Manager</p>
+                            <p>Sandaranga manages the financial aspects of Maison Neuf, ensuring that our business remains sustainable and profitable. Her financial acumen is key to our success.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team7.jpg" alt="Team Member 7" class="img-fluid">
+                            <h5>Navindu Wijerathne</h5>
+                            <p>Logistics Manager</p>
+                            <p>Navindu handles the logistics and supply chain, making sure our products are delivered on time and in perfect condition. His efficiency keeps our operations seamless.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team8.jpg" alt="Team Member 8" class="img-fluid">
+                            <h5>Bhashini Fernando</h5>
+                            <p>Customer Relations</p>
+                            <p>Bhashini is the point of contact for our customers, addressing their concerns and ensuring their satisfaction. Her dedication to customer service enhances our brand’s reputation.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member">
+                            <img src="images/team9.jpg" alt="Team Member 9" class="img-fluid">
+                            <h5>Venura Rajawasam</h5>
+                            <p>IT Manager</p>
+                            <p>Venura manages our IT infrastructure, ensuring that our online presence is secure and efficient. His technical expertise is crucial for our digital operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="text-center" style="font-family: 'Playfair Display', serif; color: gold;">Testimonials</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial-box">
+                            <p>"Amazing quality and beautiful designs. I'm in love with my new dress!"</p>
+                            <span>- Sahan Wanasundara</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-box">
+                            <p>"The customer service was fantastic and the products arrived on time."</p>
+                            <span>- Dishani Jason</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-box">
+                            <p>"Highly recommend Maison Neuf for anyone looking for unique fashion pieces."</p>
+                            <span>- Sumana Godagamage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="text-center" style="font-family: 'Playfair Display', serif; color: gold;">Our Impact</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Community Engagement</h4>
+                        <p>Maison Neuf is committed to giving back to the community. We engage in various initiatives to support local artisans, promote education, and contribute to social causes. Our goal is to make a positive impact and uplift those around us.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Environmental Responsibility</h4>
+                        <p>We take our environmental responsibilities seriously. Through sustainable practices, we aim to reduce our carbon footprint and promote eco-friendly fashion. We believe in protecting the planet for future generations and work tirelessly to make our processes as green as possible.</p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 class="text-center" style="font-family: 'Playfair Display', serif; color: gold;">Our Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-event left">
+                        <span></span>
+                        <h4>2024 January</h4>
+                        <p>Maison Neuf was founded by nine passionate individuals at NSBM, Sri Lanka.</p>
+                    </div>
+                    <div class="timeline-event right">
+                        <span></span>
+                        <h4>2024 February</h4>
+                        <p>Launched our first collection, blending traditional Sri Lankan aesthetics with modern designs.</p>
+                    </div>
+                    <div class="timeline-event left">
+                        <span></span>
+                        <h4>2024 March</h4>
+                        <p>Expanded our product range to include accessories and cosmetics, embracing sustainability in our processes.</p>
+                    </div>
+                    <div class="timeline-event right">
+                        <span></span>
+                        <h4>2024 April</h4>
+                        <p>Opened our first flagship store in Colombo, Sri Lanka, marking a significant milestone in our journey.</p>
+                    </div>
+                    <div class="timeline-event left">
+                        <span></span>
+                        <h4>2024 May</h4>
+                        <p>Launched our online store, making our unique fashion pieces accessible worldwide.</p>
+                    </div>
+                    <div class="timeline-event right">
+                        <span></span>
+                        <h4>2024 June</h4>
+                        <p>Initiated our community engagement programs to support local artisans and promote education.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-4">
+        © 2024 Maison Neuf. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
