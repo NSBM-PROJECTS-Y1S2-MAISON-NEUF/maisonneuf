@@ -18,7 +18,10 @@
                 success: function(response) {
                     if (response.loggedIn) {
                         // window.location.href = "userProfile.html"
-                        alert("Logged in");
+                        alert("Logged in :" + response.user);
+                        // change the window element login to logout
+                        document.getElementById("loginButton").innerHTML = "Logout - "+response.user;
+                        document.getElementById("loginButton").href = "php/logout.php";
                     } else {
                         alert("Not Logged In");
                     }
@@ -292,7 +295,7 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="login.html" id="loginButton">Login</a>
                         </li>
                     </ul>
                 </div>

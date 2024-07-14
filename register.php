@@ -1,13 +1,15 @@
 <?php
-include 'db.php';
+include 'php/db.php';
+
+echo $_SESSION['username'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
-    $_SESSSION['username'] = $email;
+    $sql = "INSERT INTO users (Username, email, password) VALUES ('$email', '$email', '$password')";
     if ($conn->query($sql) === TRUE) {
+        $_SESSSION['user'] = $email;
         header("Location: login.html");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -55,22 +57,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="container text-center">
             <p class="mb
 
-            <?php
-include 'db.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $email = $_POST["email"];
-
-    $sql = "INSERT INTO Users (Username, Password, Email) VALUES ('$username', '$password', '$email')";
-    if ($conn->query($sql) === TRUE) {
-        echo "Registration successful!";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conn->close();
-}
-?>
         
